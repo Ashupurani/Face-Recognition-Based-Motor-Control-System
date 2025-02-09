@@ -1,0 +1,66 @@
+# Face Recognition-Based Motor Control System
+
+## Overview
+This project implements a face recognition-based authentication system to control motors via a web-based control panel. The system consists of the following components:
+- **Facial Recognition** using OpenCV in Python.
+- **Backend API** using Flask with MySQL for user authentication.
+- **Web Control Panel** for user interaction.
+- **ESP8266 (Arduino)** for motor control.
+
+## Features
+- User authentication via facial recognition.
+- Secure communication with the control panel.
+- Motor control through a web-based interface.
+- Real-time feedback from ESP8266.
+
+## Installation & Setup
+
+### Prerequisites
+- Python 3.x
+- OpenCV
+- Flask
+- MySQL Server
+- ESP8266 module
+- Arduino IDE
+
+### Step 1: Clone the Repository
+```bash
+git clone https://github.com/yourusername/facial-motor-control.git
+cd facial-motor-control
+```
+
+### Step 2: Setup the Database
+1. Start MySQL and create the database:
+```sql
+CREATE DATABASE face_auth;
+USE face_auth;
+SOURCE mysql_schema.sql;
+```
+2. Update database credentials in `backend_api.py`.
+
+### Step 3: Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### Step 4: Run the Backend API
+```bash
+python backend_api.py
+```
+
+### Step 5: Upload ESP8266 Code
+1. Open `esp8266_motor_control.ino` in Arduino IDE.
+2. Configure WiFi credentials.
+3. Upload the code to the ESP8266.
+
+### Step 6: Start Facial Recognition
+```bash
+python facial_auth.py
+```
+
+### Step 7: Access the Web Panel
+Open `web_control_panel.html` in a browser and control the motors.
+
+## License
+This project is licensed under the MIT License. See `LICENSE` for details.
+

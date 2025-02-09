@@ -1,0 +1,13 @@
+CREATE DATABASE face_auth;
+
+USE face_auth;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    face_encoding TEXT NOT NULL
+);
+
+INSERT INTO users (name, face_encoding) VALUES 
+('John Doe', 'ENCODING_DATA_1'),
+('Jane Doe', 'ENCODING_DATA_2');
